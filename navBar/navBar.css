@@ -1,0 +1,9 @@
+#navBar{
+    background-color: lightskyblue;
+    height: 100px;
+}
+
+.nav-item {
+    padding: 20px;
+    font-size: 25px;
+}
