@@ -1,5 +1,5 @@
 #navBar{
-    background-color:aliceblue;
+    background-color: rgb(166, 243, 246);;
     height: 100px;
    
 }
@@ -17,4 +17,7 @@
     background-color: aliceblue;
     color: darkgray;
    
+}
+.nav-link{
+    color:rgb(11, 12, 12);
 }
