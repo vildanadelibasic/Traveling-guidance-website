@@ -1,9 +1,20 @@
 #navBar{
-    background-color: lightskyblue;
+    background-color:aliceblue;
     height: 100px;
+   
 }
 
 .nav-item {
     padding: 20px;
     font-size: 25px;
+    padding-left: 100px;
+}
+#search{
+    font-size: 25px;
+}
+#buttonSearch{
+    font-size: 15px;
+    background-color: aliceblue;
+    color: darkgray;
+   
 }
