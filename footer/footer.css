@@ -1,1 +1,24 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color:rgba(0, 0, 0, 0.65);
+}
 
+.footer {
+    background-color: rgb(166, 243, 246);
+    height: 250px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.info {
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    background-color: rgb(120, 240, 244);
+    font-weight: bold;
+    padding: 2px;
+}
