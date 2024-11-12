@@ -1,10 +1,11 @@
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    color:rgba(0, 0, 0, 0.65);
+    color: rgba(0, 0, 0, 0.65);
+    overflow-x: hidden;
 }
 
-#navBar{
+#navBar {
     background-color: rgb(166, 243, 246);
 }
 
@@ -14,8 +15,9 @@ body {
 }
 
 .logo {
-    width: 100px;
-    margin-right: 50px;
+    width: 120px;
+    margin-right: 30px;
+    margin-left: 10px;
 }
 
 .nav-item {
@@ -23,19 +25,19 @@ body {
     font-size: 20px;
 }
 
-#search{
+#search {
     font-size: 20px;
 }
 
-#buttonSearch{
+#buttonSearch {
     font-size: 15px;
     background-color: aliceblue;
     color: darkgray;
     border-color: white;
-   
 }
-.nav-link{
-    color:rgb(11, 12, 12);
+
+.nav-link {
+    color: rgb(11, 12, 12);
 }
 
 .footer {
@@ -60,42 +62,67 @@ body {
 }
 
 .main {
-    
+    position: relative;
     text-align: center;
-    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
+    overflow: hidden;
+    height: 100vh;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 72px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(149, 219, 243);
+    color: rgb(26, 22, 22);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.text-block:hover {
+    background-color: rgb(126, 212, 241);
+    color: white;
+    transition: 250ms;
+}
+
+/* Media Queries za responzivnost */
+@media (max-width: 768px) {
+    .centered {
+        font-size: 8vw; /* Manja font veličina za mobilne uređaje */
+    }
     
+    .text-block {
+        font-size: 14px;
+        bottom: 10px;
+        right: 10px;
     }
+}
 
-    .image {
-        width: 100%;    
-        height: 100%;  
-        object-fit: cover;
-        opacity: 0.6;
-
-        
+@media (max-width: 480px) {
+    .centered {
+        font-size: 10vw; /* Još manja font veličina za vrlo male ekrane */
     }
-    .centered{
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 70px;
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        text-align: center;
-            }
-          .text-block {
-                position: absolute;
-                bottom: 20px;
-                right: 20px;
-                background-color: rgb(149, 219, 243);
-                color: rgb(26, 22, 22);
-                padding-left: 20px;
-                padding-right: 20px;
-              }
+}
