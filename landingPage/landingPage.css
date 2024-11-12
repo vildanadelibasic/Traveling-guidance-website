@@ -1,9 +1,11 @@
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.65);
     overflow-x: hidden;
 }
+
 
 #navBar {
     background-color: rgb(166, 243, 246);
@@ -35,115 +37,11 @@ body {
     color: darkgray;
     border-color: white;
 }
-* {box-sizing: border-box}
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
 
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #97e4ead5;
-  color: rgb(0, 0, 0);
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }}
 .nav-link {
     color: rgb(11, 12, 12);
 }
+
 
 .footer {
     background-color: rgb(166, 243, 246);
@@ -190,7 +88,7 @@ hr {
     transform: translate(-50%, -50%);
     font-size: 72px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.8);;
+    color: rgba(0, 0, 0, 0.8);
     font-weight: bold;
     z-index: 10;
 }
@@ -213,10 +111,10 @@ hr {
     transition: 250ms;
 }
 
-/* Media Queries za responzivnost */
+
 @media (max-width: 768px) {
     .centered {
-        font-size: 8vw; /* Manja font veličina za mobilne uređaje */
+        font-size: 8vw; /
     }
     
     .text-block {
@@ -228,6 +126,75 @@ hr {
 
 @media (max-width: 480px) {
     .centered {
-        font-size: 10vw; /* Još manja font veličina za vrlo male ekrane */
+        font-size: 10vw;
     }
 }
+
+
+.modal-toggle {
+    display: none; 
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    align-items: flex-start; 
+    z-index: 1000; 
+    padding-top: 100px; 
+}
+
+
+.modal-toggle:checked + .modal {
+    display: flex; 
+}
+
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.close-btn {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+#registerBtn {
+    margin-left: 10px;
+    background-color: #c9f7f6;
+    color: rgb(11, 7, 7);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registerBtn:hover {
+    background-color: #08e2df;
+    transition: 250ms;
+}
+
