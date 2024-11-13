@@ -1,0 +1,12 @@
+#form {
+    padding-top: 140px;
+}
+
+#sendButton {
+    background-color: rgb(166, 243, 246);
+    color: black;
+}
+
+#sendButton:hover {
+    background-color: rgb(122, 235, 239);
+}

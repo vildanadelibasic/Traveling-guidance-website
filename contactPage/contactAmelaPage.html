@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel ="stylesheet" href="contactPage.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background-color: whitesmoke;">
+
+<div class="container mt-3" id="form">
+  <h1 style="text-align: center;">CONTACT US</h1>
+  <form action="/action_page.php">
+    <div class="mb-3 mt-3">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" value="amela.vatres@stu.ibu.edu.ba" name="email">
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="comment">Message:</label>
+        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="sendButton">Send</button>
+  </form>
+</div>
+
+</body>
+</html>
