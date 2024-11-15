@@ -74,39 +74,58 @@ body {
     height: 100vh;
 }
 
-.image {
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-}
+    object-fit: cover;}
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 72px;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: bold;
-    z-index: 10;
-}
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; 
+        font-size: 5rem; 
+        font-weight: bold;
+        text-align: center;
+        z-index: 2; 
+    }
+    
+    
+    .text-block {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        background-color: rgba(162, 210, 236, 0.858); /* Poluprovidna pozadina */
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 2;
+    }
+    
+    .text-block h4 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    
+    .text-block p {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-.text-block {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgb(149, 219, 243);
-    color: rgb(26, 22, 22);
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 16px;
-    border-radius: 10px;
-}
 
 .text-block:hover {
-    background-color: rgb(126, 212, 241);
+    background-color: rgb(112, 207, 239);
     color: white;
     transition: 250ms;
 }
