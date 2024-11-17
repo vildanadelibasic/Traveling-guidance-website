@@ -1,165 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="planningPage.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="planningPage.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>About Us Page</title>
-</head>
-<body>
+    <title>Travel Guidance - Planning</title>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-sm" id="navBar">
-        <div class="container-fluid">
-          <a href="../landingPage/landingPage.html"><img src="../pictures/logo.png" class="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mynavbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black; font-weight: bold;">Planning</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../destinationPage/destinationPage.html">Destinations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../aboutUsPage/aboutUsPage.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My gallery</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="../myGalleryPage/istanbulPage/istanbulPage.html">Istanbul</a></li>
-                  <li><a class="dropdown-item" href="#">Herceg Novi</a></li>
-                  <li><a class="dropdown-item" href="#">Pariz</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" id="search" type="text" placeholder="Search">
-              <button class="btn btn-primary" id="buttonSearch" type="button">Search</button>
-              <button class="btn btn-primary" id="registerBtn" type="button" onclick="document.getElementById('modalToggle').checked = true;">Registruj se</button>
-              <input type="checkbox" class="modal-toggle" id="modalToggle">
-              <div class="modal">
-                  <div class="modal-content">
-                      <span class="close-btn" onclick="document.getElementById('modalToggle').checked = false;">&times;</span>
-                      <h2>Registracija</h2>
-                      <form>
-                          <label for="username">Korisničko ime:</label>
-                          <input type="text" id="username" name="username" required>
-                          
-                          <label for="email">Email:</label>
-                          <input type="email" id="email" name="email" required>
-                          
-                          <label for="password">Lozinka:</label>
-                          <input type="password" id="password" name="password" required>
-                          
-                          <button type="submit">Registruj se</button>
-                      </form>
-                  </div>
+      <div class="container-fluid">
+        <a href="../landingPage/landingPage.html"><img src="../pictures/logo.png" class="logo" alt="Logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black; font-weight: bold">Planning</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../destinationPage/destinationPage.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../aboutUsPage/aboutUsPage.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My gallery</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../myGalleryPage/istanbulPage/istanbulPage.html">Istanbul</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../myGalleryPage/hercegNoviPage/hercegNoviPage.html">Herceg Novi</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../myGalleryPage/parisPage/parisPage.html">Paris</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" id="search" type="text" placeholder="Search" />
+            <button class="btn btn-primary" id="buttonSearch" type="button">Search</button>
+            <button class="btn btn-primary" id="registerBtn" type="button" onclick="document.getElementById('modalToggle').checked = true;">Registruj se</button>
+            <input type="checkbox" class="modal-toggle" id="modalToggle" />
+            <div class="modal">
+              <div class="modal-content">
+                <span class="close-btn" onclick="document.getElementById('modalToggle').checked = false;">&times;</span>
+                <h2>Registracija</h2>
+                <form>
+                  <label for="username">Korisničko ime:</label>
+                  <input type="text" id="username" name="username" required />
+
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required />
+
+                  <label for="password">Lozinka:</label>
+                  <input type="password" id="password" name="password" required />
+
+                  <button type="submit">Registruj se</button>
+                </form>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
+      </div>
     </nav>
-    <input type="checkbox" class="modal-toggle" id="modalToggle">
-    <div class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('modalToggle').checked = false;">&times;</span>
-            <h2>Registracija</h2>
-            <form>
-                <label for="username">Korisničko ime:</label>
-                <input type="text" id="username" name="username" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Lozinka:</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">Registruj se</button>
-            </form>
-        </div>
+
+    <div class="main" id="planning">
+      <video class="background-video" autoplay muted loop>
+        <source src="../videos/table video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h2 id="fontTable">HOTEL AND AGENCY RECOMMENDATIONS</h2>
+      <table id="table">
+        <thead>
+          <tr id="tableColor">
+            <th>DESTINATION</th>
+            <th>HOTEL</th>
+            <th>AGENCY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ISTANBUL</td>
+            <td>
+              <a href="https://shorturl.at/BlruQ" target="_blank">Radisson Blu</a>
+            </td>
+            <td>
+              <a href="https://www.efenditravel.com/" target="_blank">Efendi Travel</a>
+            </td>
+          </tr>
+          <tr>
+            <td>DUBAI</td>
+            <td>
+              <a href="https://shorturl.at/2aFI5" target="_blank">Crowne Plaza</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/msrxstad" target="_blank">Neurooceantours</a>
+            </td>
+          </tr>
+          <tr>
+            <td>BUDAPEST</td>
+            <td>
+              <a href="https://shorturl.at/2Pxm2" target="_blank">Anantara New York Palace</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/yc4uam9d" target="_blank">Eurama</a>
+            </td>
+          </tr>
+          <tr>
+            <td>ATHENS</td>
+            <td>
+              <a href="https://tinyurl.com/mr3vz2ra" target="_blank">InterContinental</a>
+            </td>
+            <td><a href="https://ivis.gr/en/" target="_blank">Travel</a></td>
+          </tr>
+          <tr>
+            <td>MILANO</td>
+            <td>
+              <a href="https://tinyurl.com/3zj8ftkz" target="_blank">Bulgari Hotel</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/yu22w82c" target="_blank">Biz Away</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SARAJEVO</td>
+            <td>
+              <a href="https://tinyurl.com/5n7fb6w2" target="_blank">Swissotel</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/yhydfkm2" target="_blank">Ventura</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SPLIT</td>
+            <td>
+              <a href="https://tinyurl.com/4j25fr68" target="_blank">Radisson Blu</a>
+            </td>
+            <td>
+              <a href="http://adriatic-travel.hr/" target="_blank">Adriatic Travel</a>
+            </td>
+          </tr>
+          <tr>
+            <td>PARIS</td>
+            <td>
+              <a href="https://tinyurl.com/yc5suaf5" target="_blank">Champs-Elysées Etoile</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/3zf9943w" target="_blank">Ayruu</a>
+            </td>
+          </tr>
+          <tr>
+            <td>ROME</td>
+            <td>
+              <a href="https://tinyurl.com/266ndtzz" target="_blank">The St. Regis</a>
+            </td>
+            <td>
+              <a href="https://tinyurl.com/yk36xa3d" target="_blank">Caldana</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-
-<div class="main" id="planning">
-  <video class="background-video" autoplay muted loop>
-    <source src="../videos/table video.mp4" type="video/mp4">
-    Vaš pregledač ne podržava video tag.
-  </video>
-  <h2 id="fontTable">HOTEL AND AGENCY RECOMMENDATIONS</h2>
-  <table id="table">
-    <tr id="tableColor"> 
-      <th>DESTINATION</th>
-      <th>HOTEL</th>
-      <th>AGENCY</th>
-    </tr>
-    <tr>
-      <td>ISTANBUL</td>
-      <td><a href="https://shorturl.at/BlruQ" target="_blank">Radisson Blu</a></td>
-      <td><a href="https://www.efenditravel.com/" target="_blank">Efendi Travel</a></td>
-    </tr>
-    <tr>
-      <td>DUBAI</td>
-      <td><a href="https://shorturl.at/2aFI5" target="_blank">Crowne Plaza</a></td>
-      <td><a href="https://tinyurl.com/msrxstad" target="_blank">Neurooceantours</a></td>
-    </tr>
-    <tr>
-      <td>BUDAPEST</td>
-      <td><a href="https://shorturl.at/2Pxm2" target="_blank">Anantara New York Palace</a></td>
-      <td><a href="https://tinyurl.com/yc4uam9d" target="_blank">Eurama</a></td>
-    </tr>
-    <tr>
-      <td>ATHENE</td>
-      <td><a href="https://tinyurl.com/mr3vz2ra" target="_blank">InterContinental</a></td>
-      <td><a href="https://ivis.gr/en/" target="_blank">Travel</a></td>
-    </tr>
-    <tr>
-      <td>MILANO</td>
-      <td><a href="https://tinyurl.com/3zj8ftkz" target="_blank">Bulgari Hotel</a></td>
-      <td><a href="https://tinyurl.com/yu22w82c" target="_blank">Biz Away</a></td>
-    </tr>
-    <tr>
-      <td>SARAJEVO</td>
-      <td><a href="https://tinyurl.com/5n7fb6w2" target="_blank">Swissotel</a></td>
-      <td><a href="https://tinyurl.com/yhydfkm2" target="_blank">Ventura</a></td>
-    </tr>
-    <tr>
-      <td>SPLIT</td>
-      <td><a href="https://tinyurl.com/4j25fr68" target="_blank">Radisson Blu</a></td>
-      <td><a href="http://adriatic-travel.hr/" target="_blank">Adriatic Travel</a></td>
-    </tr>
-    <tr>
-      <td>PARIS</td>
-      <td><a href="https://tinyurl.com/yc5suaf5" target="_blank">Champs-Elysées Etoile</a></td>
-      <td><a href="https://tinyurl.com/3zf9943w" target="_blank">Ayruu</a></td>
-    </tr>
-    <tr>
-      <td>ROME</td>
-      <td><a href="https://tinyurl.com/266ndtzz" target="_blank">The St. Regis</a></td>
-      <td><a href="https://tinyurl.com/yk36xa3d" target="_blank">Caldana</a></td>
-    </tr>
-  </table>
-</div>
-
-
-      <footer class="footer">
-        <div class="info">
-            <p >NAME AND SURNAME</p>
-            <p style="font-weight: bold;">Vildana Delibašić</p>
-            <p>DEPARTMENT</p>
-            <p style="font-weight: bold;">IT Department</p>
-        </div>
-        <div class="copyright">
-            <p class="copyrightText">©2024 Copyright: vildana.delibasic</p>
-        </div>
+    <footer class="footer">
+      <div class="info">
+        <p>NAME AND SURNAME</p>
+        <p style="font-weight: bold">Vildana Delibašić</p>
+        <p>DEPARTMENT</p>
+        <p style="font-weight: bold">IT Department</p>
+      </div>
+      <div class="copyright">
+        <p class="copyrightText">©2024 Copyright: vildana.delibasic</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,9 +1,20 @@
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.65);
     overflow-x: hidden;
 }
+
+html {
+    box-sizing: border-box;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 
 #navBar {
     background-color: rgb(166, 243, 246);
@@ -40,119 +51,86 @@ body {
     color: rgb(11, 12, 12);
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-  
-html {
-    box-sizing: border-box;
-}
-  
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-  
+
 .column {
     width: 33.3%;
     padding: 0 8px;
     box-sizing: border-box;
 }
-  
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
     height: auto;
     padding: 16px;
 }
-  
+
 .about-section {
     padding: 50px;
     text-align: center;
     background-color: rgba(124, 234, 227, 0.345);
     color: black;
 }
-  
+
 .container {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
-  
+
 .flex-container {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
-  
+
 .profile-img {
-    width: 20%; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    transition: transform 0.3s ease; /* Dodajemo smooth efekat za transformaciju */
+    width: 20%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
-  
+
 .profile-img:hover {
-    transform: scale(1.2); /* Povećanje slike pri hover-u */
+    transform: scale(1.2);
 }
-  
+
 .text-content {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
-  
+
 .title {
     color: grey;
 }
-  
-.button {
+
+#registerBtn {
+    margin-left: 10px;
+    background-color: #c9f7f6;
+    color: rgb(11, 7, 7);
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: black;
-    background-color: rgb(166, 243, 246);
-    text-align: center;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    transition: background-color 250ms ease;
 }
-  
-.button:hover {
-    background-color: #057b88;
+
+#registerBtn:hover {
+    background-color: #08e2df;
 }
-  
+
+.modal-toggle {
+    display: none;
+}
 
 .team-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-  
-
-@media screen and (max-width: 768px) {
-    .column {
-        width: 100%; 
-        margin-bottom: 20px;
-    }
-  
-    .profile-img {
-        width: 50%;
-        margin-bottom: 16px;
-    }
-  
-    .team-container {
-        justify-content: center;
-    }
-}
-  
-@media screen and (max-width: 650px) {
-    .column {
-        width: 100%;
-        display: block;
-    }
 }
 
 .footer {
@@ -162,9 +140,8 @@ html {
     text-align: center;
 }
 
-/* Kontakt form styling (dodano) */
 .contact-form-container {
-    display: none; /* Skrivene forme, pojaviće se kad korisnik klikne na "Contact" */
+    display: none;
     position: fixed;
     top: 20%;
     left: 50%;
@@ -229,29 +206,22 @@ html {
     background-color: #bbb;
 }
 
-.modal-toggle {
-    display: none; 
-}
-
-
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    align-items: flex-start; 
-    z-index: 1000; 
-    padding-top: 100px; 
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: flex-start;
+    z-index: 1000;
+    padding-top: 100px;
 }
-
 
 .modal-toggle:checked + .modal {
-    display: flex; 
+    display: flex;
 }
-
 
 .modal-content {
     background-color: #ffffff;
@@ -263,7 +233,6 @@ html {
     position: relative;
     margin-bottom: 30px;
 }
-
 
 .close-btn {
     color: #000000;
@@ -278,7 +247,6 @@ html {
 .close-btn:hover {
     color: #333;
 }
-
 
 #registerBtn {
     margin-left: 10px;
@@ -296,6 +264,70 @@ html {
     transition: 250ms;
 }
 
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
 
+    .profile-img {
+        width: 50%;   
+        margin-bottom: 16px;
+    }
+
+    .team-container {
+        justify-content: center; 
+    }
+
+    .container, .flex-container {
+        flex-direction: column;  
+        align-items: center;      
+    }
+
+    #registerBtn {
+        width: 100%;  
+}
+
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block; 
+    }
+
+    .profile-img {
+        width: 80%;  
+    }
+
+    .footer {
+        height: 200px;  
+    }
+
+    .contact-form-container {
+        width: 90%; 
+        padding: 15px;  
+    }
+
+    .modal-content {
+        width: 90%;  
+        padding: 20px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;  
+        padding: 15px;  
+    }
+
+    .profile-img {
+        width: 100%; 
+    }
+
+    .container, .flex-container {
+        flex-direction: column;  
+    }
+}
+}
 
 

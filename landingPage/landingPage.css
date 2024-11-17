@@ -101,7 +101,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        background-color: rgba(162, 210, 236, 0.858); /* Poluprovidna pozadina */
+        background-color: rgba(162, 210, 236, 0.858); 
         color: white;
         padding: 10px;
         border-radius: 5px;
@@ -130,6 +130,26 @@ body {
     transition: 250ms;
 }
 
+#registerBtn {
+    margin-left: 10px;
+    background-color: #c9f7f6;
+    color: rgb(11, 7, 7);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+}
+
+#registerBtn:hover {
+    background-color: #08e2df;
+}
+
+
+.modal-toggle {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .centered {

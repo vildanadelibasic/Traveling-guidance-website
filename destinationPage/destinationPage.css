@@ -134,6 +134,7 @@ body {
 }
 
 
+
 #registerBtn {
     margin-left: 10px;
     background-color: #c9f7f6;
@@ -143,11 +144,16 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 250ms ease;
 }
 
 #registerBtn:hover {
     background-color: #08e2df;
-    transition: 250ms;
+}
+
+
+.modal-toggle {
+    display: none;
 }
 #destination{
     background-color:  #99efee9b;
