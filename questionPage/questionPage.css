@@ -1,0 +1,184 @@
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+#navBar {
+    background-color: rgb(166, 243, 246);
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-collapse {
+    background-color: rgb(166, 243, 246);
+    padding: 10px;
+}
+
+.logo {
+    width: 120px;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.nav-item {
+    padding: 20px;
+    font-size: 20px;
+}
+
+#search {
+    font-size: 20px;
+}
+
+#buttonSearch {
+    font-size: 15px;
+    background-color: aliceblue;
+    color: darkgray;
+    border-color: white;
+}
+
+.nav-link {
+    color: rgb(11, 12, 12);
+}
+
+
+.footer {
+    background-color: rgb(166, 243, 246);
+    height: 250px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.accordion-container {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    background-color: #f7f9fc;
+    color: #333;
+    font-size: 18px;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.accordion-header:hover {
+    background-color: #e1effe;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+
+#registerBtn {
+    margin-left: 10px;
+    background-color: #c9f7f6;
+    color: rgb(11, 7, 7);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 250ms ease;
+}
+
+#registerBtn:hover {
+    background-color: #08e2df;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #search {
+        font-size: 18px;
+    }
+
+    #buttonSearch {
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 200px;
+    }
+
+    #registerBtn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 80px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #search {
+        font-size: 16px;
+    }
+
+    #buttonSearch {
+        font-size: 12px;
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+    #registerBtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

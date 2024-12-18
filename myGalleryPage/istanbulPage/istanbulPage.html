@@ -30,13 +30,12 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My gallery</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Istanbul</a></li>
-                <li>
-                  <a class="dropdown-item" href="../hercegNoviPage/hercegNoviPage.html">Herceg Novi</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../parisPage/parisPage.html">Paris</a>
-                </li>
+                <li><a class="dropdown-item" href="../hercegNoviPage/hercegNoviPage.html">Herceg Novi</a></li>
+                <li><a class="dropdown-item" href="../parisPage/parisPage.html">Paris</a></li>
               </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../questionPage/questionPage.html">Questions</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -72,13 +71,25 @@
     <div class="container my-4">
       <div class="row">
         <div class="col-12 col-md-4 mb-3">
-          <img src="../../pictures/istanbul10.jpg" class="img-fluid img-bordered" alt="Istanbul 1" />
+          <img src="../../pictures/istanbul10.jpg" class="img-fluid img-bordered thumbnail" alt="Istanbul 1" data-description="The image depicts a majestic mosque seen from the Bosphorus in Istanbul, with its towering minarets reaching towards the sky and an imposing dome dominating the horizon. Bathed in the golden hues of the setting sun, the mosque reflects the serenity and historical beauty of this sacred space. In the background, the calm waters of the sea contrast with the vibrant energy of Istanbul" />
         </div>
         <div class="col-12 col-md-4 mb-3">
-          <img src="../../pictures/istanbul2.jpg" class="img-fluid img-bordered" alt="Istanbul 2" />
+          <img src="../../pictures/istanbul2.jpg" class="img-fluid img-bordered thumbnail" alt="Istanbul 2" data-description="The image captures the stunning view from a boat cruising along the Bosphorus, offering a panoramic perspective of Istanbul's skyline. The waters shimmer under the sunlight as the boat gently glides, with the city's iconic landmarks, including mosques and palaces, lining the shores. The skyline blends modern and historical architecture, while the breeze and sound of the waves enhance the peaceful atmosphere of the moment." />
         </div>
         <div class="col-12 col-md-4 mb-3">
-          <img src="../../pictures/istanbul3.jpg" class="img-fluid img-bordered" alt="Istanbul 3" />
+          <img src="../../pictures/istanbul3.jpg" class="img-fluid img-bordered thumbnail" alt="Istanbul 3" data-description="The image features a stunning view with the iconic Hagia Sophia in the background. Its grand architecture and intricate details stand out against the sky, symbolizing centuries of history and culture. The majestic domes and minarets rise above the scene, capturing the essence of Istanbul’s rich heritage. The atmosphere is one of awe and reverence, with the beauty of this historical masterpiece commanding attention from every angle." />
+        </div>
+      </div>
+    </div>
+
+
+    <input type="checkbox" class="modal-toggle2" id="modalToggle2" />
+    <div class="modal2">
+      <div class="modal-content2">
+        <span class="close-btn2">&times;</span>
+        <div class="modal-body2">
+          <img id="modalImage" class="modal-image" alt="Modal Image" />
+          <p id="modalDescription2" class="modal-description2"></p>
         </div>
       </div>
     </div>
@@ -94,5 +105,7 @@
         <p class="copyrightText">©2024 Copyright: vildana.delibasic</p>
       </div>
     </footer>
+
+    <script src="istanbulPage.js"></script>
   </body>
 </html>

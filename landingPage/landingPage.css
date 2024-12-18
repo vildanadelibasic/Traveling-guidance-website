@@ -1,4 +1,6 @@
 
+
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -150,6 +152,7 @@ body {
 .modal-toggle {
     display: none;
 }
+
 
 @media (max-width: 768px) {
     .centered {
