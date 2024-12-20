@@ -5,23 +5,78 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="contactPage.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   </head>
   <body style="background-color: whitesmoke">
     <div class="container mt-3" id="form">
       <h1 style="text-align: center">CONTACT US</h1>
-      <form action="https://jsonplaceholder.typicode.com/posts" method="POST" target="_blank">
+      <form id="contactForm" onsubmit="return validateForm(event)">
         <div class="mb-3 mt-3">
           <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" value="zejneb.semic@stu.ibu.edu.ba" name="email" />
+          <input type="email" class="form-control" id="email" value="zejneb.semic@stu.ibu.edu.ba" name="email" required />
+          <div id="emailError" style="color: red; display: none;">Please enter a valid email address.</div>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="date">Select Date:</label>
+          <input type="date" class="form-control" id="date" name="date" required />
+          <div id="dateError" style="color: red; display: none;">Please select a valid date.</div>
         </div>
         <div class="mb-3 mt-3">
           <label for="comment">Message:</label>
-          <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+          <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+          <div id="messageError" style="color: red; display: none;">Message cannot be empty.</div>
         </div>
         <button type="submit" class="btn btn-primary" id="sendButton">Send</button>
       </form>
     </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); 
+
+        const email = document.getElementById("email").value;
+        const emailError = document.getElementById("emailError");
+        const date = document.getElementById("date").value;
+        const dateError = document.getElementById("dateError");
+        const message = document.getElementById("comment").value;
+        const messageError = document.getElementById("messageError");
+
+        let isValid = true;
+
+      
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.match(emailPattern)) {
+          emailError.style.display = "block";
+          isValid = false;
+        } else {
+          emailError.style.display = "none";
+        }
+
+     
+        if (!date) {
+          dateError.style.display = "block";
+          isValid = false;
+        } else {
+          dateError.style.display = "none";
+        }
+
+        if (!message.trim()) {
+          messageError.style.display = "block";
+          isValid = false;
+        } else {
+          messageError.style.display = "none";
+        }
+
+        
+        if (isValid) {
+          toastr.success("Your message has been successfully sent!");
+          document.getElementById("contactForm").reset();  
+        } else {
+          toastr.error("Please fill in all required fields correctly.");
+        }
+      }
+    </script>
   </body>
 </html>
