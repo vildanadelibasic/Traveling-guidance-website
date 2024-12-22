@@ -1,0 +1,63 @@
+[
+    {
+      "title": "First time in Amsterdam",
+      "rating": "★★★★★ (5/5)",
+      "author": "Ana Jovanović",
+      "comment": "Amsterdam was truly a paradise for art and history lovers. I recommend visiting the Van Gogh Museum and taking a boat ride through the canals. The guides on the site really helped me make the most of each day."
+    },
+    {
+      "title": "Tulum - The Caribbean Blue",
+      "rating": "★★★★☆ (4/5)",
+      "author": "Marko Petrović",
+      "comment": "Tulum is beautiful but quite expensive. The beaches are clean and the water is crystal clear. After following the tips on the site, I knew where to find affordable restaurants and local attractions. I would definitely return!"
+    },
+    {
+      "title": "Ljubljana - A Small but Charming City",
+      "rating": "★★★★☆ (4/5)",
+      "author": "Ivana Savić",
+      "comment": "Ljubljana completely impressed me with its beauty and peaceful atmosphere. The city is small but has a lot to offer, from the old town to beautiful bridges. I highly recommend this destination."
+    },
+    {
+      "title": "Beautiful beaches of Bali",
+      "rating": "★★★★★ (5/5)",
+      "author": "Jovana Marković",
+      "comment": "Bali is a paradise! The beaches are breathtaking, the culture is rich, and the locals are incredibly welcoming. I would love to go back soon and explore more of the island!"
+    },
+    {
+      "title": "A Magical Experience in Paris",
+      "rating": "★★★★★ (5/5)",
+      "author": "Luka Kovačević",
+      "comment": "Paris is beyond beautiful! The Eiffel Tower at night is a sight to behold. I spent a day at the Louvre Museum, and it was like stepping back in time. Highly recommend visiting Montmartre for its unique vibe and artistic charm."
+    },
+    {
+      "title": "The Hidden Gems of Prague",
+      "rating": "★★★★☆ (4/5)",
+      "author": "Jelena Milić",
+      "comment": "Prague has so much to offer! While it is a tourist hotspot, there are so many hidden spots off the beaten path. The old town is magical, but I loved the tranquility of Vyšehrad. The food was delicious too, especially the Czech pastries."
+    },
+    {
+      "title": "Exploring Tokyo's Vibrant Streets",
+      "rating": "★★★★★ (5/5)",
+      "author": "Milan Novak",
+      "comment": "Tokyo is a city of contrasts—modern skyscrapers alongside serene temples. The Shibuya Crossing was insane, but I loved the peacefulness of the Meiji Shrine. Definitely recommend visiting Akihabara for electronics and unique anime culture."
+    },
+    {
+      "title": "A Dream Vacation in Santorini",
+      "rating": "★★★★★ (5/5)",
+      "author": "Ana Petrović",
+      "comment": "Santorini is a dream come true! The views are absolutely breathtaking, especially during sunset. I enjoyed exploring the white-washed streets of Oia and tasting local Greek wines. A perfect destination for a romantic getaway!"
+    },
+    {
+      "title": "The Beauty of Iceland's Nature",
+      "rating": "★★★★★ (5/5)",
+      "author": "Nikola Janković",
+      "comment": "Iceland is a nature lover's paradise. The waterfalls, hot springs, and volcanic landscapes are just stunning. My favorite experience was visiting the Blue Lagoon. Be sure to check out the Golden Circle for some incredible sights."
+    },
+    {
+      "title": "Relaxing in the Maldives",
+      "rating": "★★★★☆ (4/5)",
+      "author": "Maja Savić",
+      "comment": "The Maldives is pure paradise! The beaches are pristine, and the crystal-clear water is perfect for snorkeling. I stayed at a resort with overwater bungalows, and it was an unforgettable experience. It can be pricey, but totally worth it!"
+    }
+  ]
+  

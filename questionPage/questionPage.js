@@ -1,4 +1,4 @@
-// Accordion toggle functionality
+
 const accordionHeaders = document.querySelectorAll('.accordion-header');
 
 accordionHeaders.forEach(header => {
@@ -85,3 +85,55 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   displayReviews();
 });
+function displayReviews() {
+    const reviewsContainer = document.getElementById('reviewsContainer');
+    reviewsContainer.innerHTML = '';  
+
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || []; 
+
+    reviews.forEach((review, index) => {
+        const reviewDiv = document.createElement('div');
+        reviewDiv.classList.add('review');
+        reviewDiv.innerHTML = `
+            <p>${review}</p>
+            <button onclick="editReview(${index})">Edit</button>
+            <button onclick="deleteReview(${index})">Delete</button>
+        `;
+        reviewsContainer.appendChild(reviewDiv);
+    });
+}
+
+
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const reviewText = document.getElementById('reviewText').value;
+    if (reviewText.trim()) {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push(reviewText);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        document.getElementById('reviewText').value = ''; 
+    }
+});
+
+function deleteReview(index) {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    if (confirm('Da li ste sigurni da želite obrisati ovu recenziju?')) {
+        reviews.splice(index, 1); 
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        displayReviews(); 
+    }
+}
+
+
+function editReview(index) {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    const newReview = prompt('Izmenite recenziju:', reviews[index]);
+    if (newReview !== null && newReview.trim()) {
+        reviews[index] = newReview; 
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        displayReviews(); 
+    }
+}
+
+window.onload = displayReviews;
