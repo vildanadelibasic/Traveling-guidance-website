@@ -41,6 +41,12 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../questionPage/questionPage.html">Questions</a>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-secondary" id="darkModeBtn" type="button">Dark Mode</button>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" id="search" type="text" placeholder="Search" />
@@ -166,6 +172,25 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="main" id="planning">
+        <div class="mb-3" style="width: 50%; text-align: center">
+          <input class="form-control" id="locationSearch" type="text" placeholder="Enter a location or hotel name" />
+          <button class="btn btn-primary mt-2" id="locationSearchButton" style="width: 100%">Search</button>
+        </div>
+      </div>
+
+      <div id="ratingSection" class="rating-section">
+        <h3>Rate the usefulness of the content</h3>
+        <div class="rating-container">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <p id="ratingMessage"></p>
+      </div>
     </div>
 
     <footer class="footer">
@@ -179,5 +204,77 @@
         <p class="copyrightText">©2024 Copyright: vildana.delibasic</p>
       </div>
     </footer>
+
+    <script src="planningPage.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".rating-container .star");
+        const ratingMessage = document.getElementById("ratingMessage");
+
+        stars.forEach((star) => {
+          star.addEventListener("click", function () {
+            const rating = this.getAttribute("data-value");
+            stars.forEach((s) => s.classList.remove("selected"));
+            for (let i = 0; i < rating; i++) {
+              stars[i].classList.add("selected");
+            }
+            ratingMessage.textContent = `Thanks for the ${rating} star rating!`;
+          });
+        });
+
+        const locationSearchButton = document.getElementById("locationSearchButton");
+        const locationSearchInput = document.getElementById("locationSearch");
+        const tableBody = document.querySelector("#table tbody");
+
+        async function fetchHotels(location) {
+          const apiKey = "6766cf586cd95b3edf36d5f3";
+          const apiUrl = `https://api.makcorps.com/mapping?api_key=${apiKey}&name=${encodeURIComponent(location)}`;
+
+          try {
+            const response = await fetch(apiUrl, {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (data) {
+              displayHotels(data);
+            } else {
+              throw new Error("No hotels found for this location");
+            }
+          } catch (error) {
+            console.error("Error fetching hotels:", error.message);
+            tableBody.innerHTML = `<tr><td colspan="3">No hotels found for this location.</td></tr>`;
+          }
+        }
+
+        function displayHotels(hotels) {
+          tableBody.innerHTML = "";
+          hotels.forEach((hotel) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                  <td>${hotel.details.parent_name}</td>
+                  <td>${hotel.details.highlighted_name}</td>
+                  <td>/</td>
+                `;
+            tableBody.appendChild(row);
+          });
+        }
+
+        locationSearchButton.addEventListener("click", function () {
+          const location = locationSearchInput.value.trim();
+          if (location) {
+            fetchHotels(location);
+          } else {
+            alert("Please enter a location to filter hotels.");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
