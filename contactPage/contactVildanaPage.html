@@ -5,12 +5,11 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="contactPage.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-   
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   </head>
   <body style="background-color: whitesmoke">
@@ -20,17 +19,17 @@
         <div class="mb-3 mt-3">
           <label for="email">Email:</label>
           <input type="email" class="form-control" id="email" value="vildana.delibasic@stu.ibu.edu.ba" name="email" required />
-          <div id="emailError" style="color: red; display: none;">Please enter a valid email address.</div>
+          <div id="emailError" style="color: red; display: none">Please enter a valid email address.</div>
         </div>
         <div class="mb-3 mt-3">
           <label for="date">Select Date:</label>
           <input type="date" class="form-control" id="date" name="date" required />
-          <div id="dateError" style="color: red; display: none;">Please select a valid date.</div>
+          <div id="dateError" style="color: red; display: none">Please select a valid date.</div>
         </div>
         <div class="mb-3 mt-3">
           <label for="comment">Message:</label>
           <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
-          <div id="messageError" style="color: red; display: none;">Message cannot be empty.</div>
+          <div id="messageError" style="color: red; display: none">Message cannot be empty.</div>
         </div>
         <button type="submit" class="btn btn-primary" id="sendButton">Send</button>
       </form>
@@ -38,7 +37,7 @@
 
     <script>
       function validateForm(event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const email = document.getElementById("email").value;
         const emailError = document.getElementById("emailError");
@@ -49,7 +48,6 @@
 
         let isValid = true;
 
-        
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.match(emailPattern)) {
           emailError.style.display = "block";
@@ -58,7 +56,6 @@
           emailError.style.display = "none";
         }
 
-       
         if (!date) {
           dateError.style.display = "block";
           isValid = false;
@@ -66,7 +63,6 @@
           dateError.style.display = "none";
         }
 
-       
         if (!message.trim()) {
           messageError.style.display = "block";
           isValid = false;
@@ -74,14 +70,13 @@
           messageError.style.display = "none";
         }
 
-        
         if (isValid) {
           toastr.success("Your message has been successfully sent!");
         } else {
           toastr.error("Please fill in all required fields correctly.");
         }
 
-        return isValid; 
+        return isValid;
       }
     </script>
   </body>
