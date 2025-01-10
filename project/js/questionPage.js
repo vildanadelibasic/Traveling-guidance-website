@@ -1,0 +1,118 @@
+
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+        header.classList.toggle('active');
+
+        const content = header.nextElementSibling;
+
+        if (header.classList.contains('active')) {
+            content.style.display = 'block';
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = null;
+            setTimeout(() => (content.style.display = 'none'), 300);
+        }
+    });
+});
+
+
+
+document.getElementById('viewMoreBtn').addEventListener('click', function() {
+  const extraReviews = document.getElementById('extra-reviews');
+  extraReviews.style.display = 'block'; 
+  this.style.display = 'none'; 
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const reviewsContainer = document.getElementById('reviewsContainer');
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewText = document.getElementById('reviewText');
+
+  let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+
+  function displayReviews() {
+    reviewsContainer.innerHTML = '';
+    reviews.forEach((review, index) => {
+      const reviewElement = document.createElement('div');
+      reviewElement.classList.add('review');
+      reviewElement.innerHTML = `
+        <p><strong>Review:</strong> ${review.text}</p>
+        <button class="btn btn-danger" onclick="deleteReview(${index})">Delete</button>
+      `;
+      reviewsContainer.appendChild(reviewElement);
+    });
+  }
+
+  
+  reviewForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (reviewText.value.trim() !== '') {
+      reviews.push({ text: reviewText.value });
+      localStorage.setItem('reviews', JSON.stringify(reviews));
+      reviewText.value = ''; 
+      displayReviews(); 
+    }
+  });
+
+ 
+  window.deleteReview = function (index) {
+    reviews.splice(index, 1); 
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    displayReviews(); 
+  };
+  displayReviews();
+});
+function displayReviews() {
+    const reviewsContainer = document.getElementById('reviewsContainer');
+    reviewsContainer.innerHTML = '';  
+
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || []; 
+
+    reviews.forEach((review, index) => {
+        const reviewDiv = document.createElement('div');
+        reviewDiv.classList.add('review');
+        reviewDiv.innerHTML = `
+            <p>${review}</p>
+            <button onclick="editReview(${index})">Edit</button>
+            <button onclick="deleteReview(${index})">Delete</button>
+        `;
+        reviewsContainer.appendChild(reviewDiv);
+    });
+}
+
+
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const reviewText = document.getElementById('reviewText').value;
+    if (reviewText.trim()) {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push(reviewText);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        document.getElementById('reviewText').value = ''; 
+    }
+});
+
+function deleteReview(index) {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    if (confirm('Da li ste sigurni da želite obrisati ovu recenziju?')) {
+        reviews.splice(index, 1); 
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        displayReviews(); 
+    }
+}
+
+
+function editReview(index) {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    const newReview = prompt('Izmenite recenziju:', reviews[index]);
+    if (newReview !== null && newReview.trim()) {
+        reviews[index] = newReview; 
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        displayReviews(); 
+    }
+}
+
+window.onload = displayReviews;
