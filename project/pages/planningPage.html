@@ -1,0 +1,116 @@
+<div class="main" id="planning">
+  <video class="background-video" autoplay muted loop>
+    <source src="videos/table video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <h2 id="fontTable">HOTEL AND AGENCY RECOMMENDATIONS</h2>
+  <table id="table">
+    <thead>
+      <tr id="tableColor">
+        <th>DESTINATION</th>
+        <th>HOTEL</th>
+        <th>AGENCY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ISTANBUL</td>
+        <td>
+          <a href="https://shorturl.at/BlruQ" target="_blank">Radisson Blu</a>
+        </td>
+        <td>
+          <a href="https://www.efenditravel.com/" target="_blank">Efendi Travel</a>
+        </td>
+      </tr>
+      <tr>
+        <td>DUBAI</td>
+        <td>
+          <a href="https://shorturl.at/2aFI5" target="_blank">Crowne Plaza</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/msrxstad" target="_blank">Neurooceantours</a>
+        </td>
+      </tr>
+      <tr>
+        <td>BUDAPEST</td>
+        <td>
+          <a href="https://shorturl.at/2Pxm2" target="_blank">Anantara New York Palace</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/yc4uam9d" target="_blank">Eurama</a>
+        </td>
+      </tr>
+      <tr>
+        <td>ATHENS</td>
+        <td>
+          <a href="https://tinyurl.com/mr3vz2ra" target="_blank">InterContinental</a>
+        </td>
+        <td><a href="https://ivis.gr/en/" target="_blank">Travel</a></td>
+      </tr>
+      <tr>
+        <td>MILANO</td>
+        <td>
+          <a href="https://tinyurl.com/3zj8ftkz" target="_blank">Bulgari Hotel</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/yu22w82c" target="_blank">Biz Away</a>
+        </td>
+      </tr>
+      <tr>
+        <td>SARAJEVO</td>
+        <td>
+          <a href="https://tinyurl.com/5n7fb6w2" target="_blank">Swissotel</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/yhydfkm2" target="_blank">Ventura</a>
+        </td>
+      </tr>
+      <tr>
+        <td>SPLIT</td>
+        <td>
+          <a href="https://tinyurl.com/4j25fr68" target="_blank">Radisson Blu</a>
+        </td>
+        <td>
+          <a href="http://adriatic-travel.hr/" target="_blank">Adriatic Travel</a>
+        </td>
+      </tr>
+      <tr>
+        <td>PARIS</td>
+        <td>
+          <a href="https://tinyurl.com/yc5suaf5" target="_blank">Champs-Elysées Etoile</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/3zf9943w" target="_blank">Ayruu</a>
+        </td>
+      </tr>
+      <tr>
+        <td>ROME</td>
+        <td>
+          <a href="https://tinyurl.com/266ndtzz" target="_blank">The St. Regis</a>
+        </td>
+        <td>
+          <a href="https://tinyurl.com/yk36xa3d" target="_blank">Caldana</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="main" id="planning">
+    <div class="mb-3" style="width: 50%; text-align: center">
+      <input class="form-control" id="locationSearch" type="text" placeholder="Enter a location or hotel name" />
+      <button class="btn btn-primary mt-2" id="locationSearchButton" style="width: 100%" onclick="searchHotels()">Search</button>
+    </div>
+  </div>
+
+  <div id="ratingSection" class="rating-section">
+    <h3>Rate the usefulness of the content</h3>
+    <div onclick="rate()" class="rating-container">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
+    <p id="ratingMessage"></p>
+  </div>
+</div>
